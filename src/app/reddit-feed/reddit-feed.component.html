@@ -1,0 +1,18 @@
+<img class="cute-animals"
+  src="https://styles.redditmedia.com/t5_2qh1o/styles/bannerBackgroundImage_wmbf6g1dei301.png" />
+
+<section>
+  <img class="raw" src="https://styles.redditmedia.com/t5_2qh1o/styles/bannerPositionedImage_my2oks8o5x821.png">
+  <div>
+    <h1>A subreddit for cute and cuddly pictures</h1>
+  </div>
+</section>
+<ul class="post">
+  <li *ngFor="let post of data.data.children; let i=index">
+    <span *ngIf="[i]">
+      <div class="post-title">{{ post.data.title }}</div>
+      <div><img class="thumbnails" src="{{post.data.thumbnail}}" /></div>
+      <div><a href="{{post.data.permalink}}">Click here to view post</a></div>
+    </span>
+  </li>
+</ul>
